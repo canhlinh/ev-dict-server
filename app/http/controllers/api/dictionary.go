@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/ant0ine/go-json-rest/rest"
-	"github.com/canhlinh/ev-dictionary/app/http/responses"
-	"github.com/canhlinh/ev-dictionary/app/models"
-	"github.com/canhlinh/ev-dictionary/app/services"
+	"github.com/canhlinh/ev-dict-server/app/http/responses"
+	"github.com/canhlinh/ev-dict-server/app/models"
+	"github.com/canhlinh/ev-dict-server/app/services"
 )
 
 func GetTranslateWord(w rest.ResponseWriter, r *rest.Request) {

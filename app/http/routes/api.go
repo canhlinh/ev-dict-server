@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/ant0ine/go-json-rest/rest"
-	api_controllers "github.com/canhlinh/ev-dictionary/app/http/controllers/api"
+	api_controllers "github.com/canhlinh/ev-dict-server/app/http/controllers/api"
 )
 
 func MakeAPIRoutes() *rest.Api {

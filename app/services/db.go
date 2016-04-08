@@ -4,7 +4,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/canhlinh/ev-dictionary/app/models"
+	"github.com/canhlinh/ev-dict-server/app/models"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 )

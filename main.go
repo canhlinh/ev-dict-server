@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/canhlinh/ev-dictionary/app/http/routes"
-	"github.com/canhlinh/ev-dictionary/app/services"
+	"github.com/canhlinh/ev-dict-server/app/http/routes"
+	"github.com/canhlinh/ev-dict-server/app/services"
 )
 
 func main() {
