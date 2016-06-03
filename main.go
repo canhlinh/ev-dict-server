@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/canhlinh/ev-dict-server/app/http/controllers/api"
+	"github.com/canhlinh/ev-dict-server/app/api"
 	"github.com/canhlinh/ev-dict-server/app/stores"
 	"github.com/canhlinh/ev-dict-server/app/utils"
 	log "github.com/canhlinh/log4go"

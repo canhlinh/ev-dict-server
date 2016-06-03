@@ -1,4 +1,4 @@
 .PHONY:	test
 
 test:
-	@cd app/http/controllers/api && go test -v
+	@cd app/api && go test -v
