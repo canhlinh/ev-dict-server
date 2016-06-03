@@ -1,4 +1,4 @@
-package responses
+package models
 
 type Error struct {
 	HttpCode  int    `json:"-"`

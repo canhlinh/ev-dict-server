@@ -5,11 +5,13 @@ import (
 	"net/http"
 
 	"github.com/canhlinh/ev-dict-server/app/http/routes"
-	"github.com/canhlinh/ev-dict-server/app/services"
+	"github.com/canhlinh/ev-dict-server/app/stores"
+	"github.com/canhlinh/ev-dict-server/app/utils"
 )
 
 func main() {
-	services.DbService()
+	utils.LoadConfig("./conf/config.yaml")
+	stores.NewMySQLStore()
 	api := routes.MakeAPIRoutes()
-	log.Fatal(http.ListenAndServe(":8080", api.MakeHandler()))
+	log.Fatal(http.ListenAndServe(":8000", api.MakeHandler()))
 }
