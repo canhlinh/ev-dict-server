@@ -1,17 +1,20 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"time"
 
-	"github.com/canhlinh/ev-dict-server/app/http/routes"
+	"github.com/canhlinh/ev-dict-server/app/http/controllers/api"
 	"github.com/canhlinh/ev-dict-server/app/stores"
 	"github.com/canhlinh/ev-dict-server/app/utils"
+	log "github.com/canhlinh/log4go"
+	"github.com/tylerb/graceful"
 )
 
 func main() {
 	utils.LoadConfig("./conf/config.yaml")
 	stores.NewMySQLStore()
-	api := routes.MakeAPIRoutes()
-	log.Fatal(http.ListenAndServe(":8000", api.MakeHandler()))
+	api.InitRoute()
+	api.RootMux.Use(log.NewGojiLog())
+	log.Info("Start EV dictionary on listen port : " + utils.GetConfig().ListenAddress)
+	graceful.Run(utils.GetConfig().ListenAddress, 5*time.Second, api.RootMux)
 }
