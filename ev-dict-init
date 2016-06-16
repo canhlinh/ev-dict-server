@@ -12,11 +12,11 @@
 
 NAME="ev-dict-server"
 PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"
-APPDIR="/root/source/bin/"
-APPBIN="/root/source/bin/$NAME"
+APPDIR="/home/ubuntu/ev-dict-server"
+APPBIN="$APPDIR/$NAME"
 APPARGS=""
-USER="root"
-GROUP="root"
+USER="ubuntu"
+GROUP="ubuntu"
 
 # Include functions 
 set -e
