@@ -1,5 +1,5 @@
 # Service Setting
-listen_address: ":8080"
+listen_address: ":8282"
 
 # Sql Setting
 mysql_setting:

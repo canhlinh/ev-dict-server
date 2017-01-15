@@ -9,5 +9,5 @@ var RootMux *goji.Mux
 
 func InitRoute() {
 	RootMux = goji.NewMux()
-	RootMux.HandleFuncC(pat.Get("/api/dictionary"), GetTranslateWord)
+	RootMux.HandleFunc(pat.Get("/api/dictionary"), GetTranslateWord)
 }

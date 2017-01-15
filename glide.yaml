@@ -1,0 +1,33 @@
+package: github.com/canhlinh/ev-dict-server
+import:
+- package: github.com/ant0ine/go-json-rest
+  version: cfd0da14df1db088980175e1c3c7e77c11b90718
+  subpackages:
+  - rest
+  - rest/trie
+- package: github.com/canhlinh/log4go
+  version: aec197bfab6b70b779a867e2c4dbe2edd8c46383
+- package: github.com/go-sql-driver/mysql
+  version: d512f204a577a4ab037a1816604c48c9c13210be
+- package: github.com/howeyc/fsnotify
+  version: f0c08ee9c60704c1879025f2ae0ff3e000082c13
+- package: github.com/jinzhu/gorm
+  version: 57c72125b3087e1ed02c16f23a1f381cde3aaf2c
+- package: github.com/jinzhu/inflection
+  version: 3272df6c21d04180007eb3349844c89a3856bc25
+- package: github.com/tsuru/config
+  version: 39bdb35e45ac006d4c6f8226b7e32c0ae771feba
+- package: gopkg.in/yaml.v1
+  version: 9f9df34309c04878acc86042b16630b0f696e1de
+- package: github.com/tylerb/graceful
+  version: ^1.2.13
+- package: goji.io
+  version: ^1.0.0
+  subpackages:
+  - pat
+testImport:
+- package: github.com/canhlinh/gojit
+- package: github.com/stretchr/testify
+  version: ^1.1.4
+  subpackages:
+  - assert

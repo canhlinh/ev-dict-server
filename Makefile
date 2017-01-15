@@ -1,6 +1,6 @@
 .PHONY:	build-dev
 
-DEV_SERVER = ubuntu@52.77.5.234
+DEV_SERVER = vsdict
 DISTRIBUTED_FILE = ev-dict-server
 INIT_STARTUP_FILE = ev-dict-init
 INIT_STARTUP_FOLDER = /etc/init.d
@@ -11,7 +11,7 @@ build-dev:
 	gin -a 8000 -b ev-dict-server -i
 
 deploy:
-	go build -o ev-dict-server
+	env GOOS=linux GOARCH=amd64 go build -o ev-dict-server
 	ssh $(DEV_SERVER) "mkdir -p $(REMOTE_DIR) || true"
 	rsync -azvv --progress --update $(DATABASE_FILE) $(DEV_SERVER):$(REMOTE_DIR)
 	rsync -azvv --progress --update $(INIT_STARTUP_FILE) $(DEV_SERVER):$(REMOTE_DIR)

@@ -7,10 +7,9 @@ import (
 	"github.com/canhlinh/ev-dict-server/app/models"
 	"github.com/canhlinh/ev-dict-server/app/stores"
 	"github.com/jinzhu/inflection"
-	"golang.org/x/net/context"
 )
 
-func GetTranslateWord(c context.Context, w http.ResponseWriter, r *http.Request) {
+func GetTranslateWord(w http.ResponseWriter, r *http.Request) {
 	word := r.FormValue("word")
 	if word == "" {
 		RenderErrorJSON(w, &models.Error{
