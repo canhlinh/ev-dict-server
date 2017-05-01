@@ -1,0 +1,14 @@
+[Unit]
+Description= EV dict server
+
+[Service]
+LimitNOFILE=64000
+User=ubuntu
+Group=ubuntu
+Restart=always
+WorkingDirectory=/home/ubuntu/ev-dict-server
+ExecStart=/home/ubuntu/ev-dict-server/ev-dict-server
+
+[Install]
+WantedBy=default.target
+
